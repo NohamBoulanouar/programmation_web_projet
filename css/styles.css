@@ -1,0 +1,590 @@
+
+
+/*Carousel*/
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Boutons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Points */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background: #bbb;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #555;
+}
+
+/*Header*/
+
+header{
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height:100px; 
+    padding: 10px 20px;
+    margin: -10px;
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    float: left;
+    width: auto;
+    height: 70px;
+    object-fit: contain;
+}
+
+header nav{
+     display:flex;
+     align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+#head a:hover{
+    background-color: #147CBE;
+    color: white;
+    border-radius: 10px;
+    height: 70px;
+}
+
+#search-form {
+    margin-left: 20px;
+}
+
+#search-input {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px; 
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-input:focus {
+    border-color: #147CBE;
+    box-shadow: 0 0 5px rgba(20, 124, 190, 0.5);
+}
+
+/* Footer */
+
+footer{
+    background-color: #121E3A;
+    margin: -8px;
+    color: white;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+#signature{
+    padding: 1px;
+}
+
+#signature ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+#footer div{
+    display: inline-block;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+
+/* Body */
+
+body {
+    padding-top: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* --- SECTION CHIFFRES CLÉS --- */
+
+#chiffres-cles {
+    padding: 60px 20px;
+    background-color: #f4f4f4; 
+    text-align: center;
+}
+
+.section-title {
+    color: #147CBE;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-box {
+    background-color: white;
+    padding: 30px 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px; 
+}
+
+.stat-number {
+    color: #E74C3C; 
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    line-height: 1.1;
+}
+
+.stat-label {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+
+/* Lien */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Liste */
+
+li{
+    padding: 2px;
+}
+
+
+
+/* Formation */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.page-title {
+    text-align: center;
+    color: #147CBE;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin: 0 5px;
+}
+
+.tab-button:hover:not(.active) {
+    color: #147CBE;
+    background-color: #f7f7f7;
+}
+
+.tab-button.active {
+    color: #147CBE;
+    border-bottom: 3px solid #147CBE;
+}
+
+.tab-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tab-content.hidden {
+    display: none; 
+}
+
+.tab-content h2 {
+    color: #147CBE;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.formation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.formation-table th, .formation-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.formation-table th {
+    background-color: #147CBE; 
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.formation-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+
+/*Trombinoscope*/
+
+.trombinoscope-page {
+    padding-top: 20px;
+}
+
+#trombi-search-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#trombi-search {
+    width: 80%;
+    max-width: 600px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px; 
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#trombi-search:focus {
+    border-color: #147CBE; 
+    box-shadow: 0 0 8px rgba(20, 124, 190, 0.3);
+}
+
+#trombi-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px; 
+    padding: 20px;
+}
+
+.person-card {
+    display: flex; 
+    align-items: center;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 800px; 
+    transition: box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.person-photo {
+    flex-shrink: 0; 
+    width: 150px; 
+    height: 150px; 
+    overflow: hidden;
+    border-right: 1px solid #eee;
+}
+
+.person-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.person-info {
+    padding: 20px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.person-info h2 {
+    color: #147CBE;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+
+.person-info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+
+
+
+/* --- Styles pour le Menu Déroulant (Header) --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100px; 
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #f0f0f0;
+    color: #147CBE;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; 
+    left: 0;
+    border-top: 3px solid #147CBE;
+}
+
+
+
+.dropdown-content a:hover {
+    background-color: #147CBE;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+/* --- Styles pour Partenariat et Carrière --- */
+
+.content-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.content-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.section-subtitle {
+    color: #147CBE;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-left: 5px solid #E74C3C;
+    padding-left: 15px;
+}
+
+.logos-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 70px;
+}
+
+.logos-container img{
+    height: 100px;
+    width: 200px;
+    justify-content: space-around;
+    max-height: 100px; 
+    width: auto; 
+    max-width: 200px; 
+    padding: 15px;
+    vertical-align: baseline;
+    object-fit: contain; 
+ }
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.stat-item {
+    padding: 15px;
+}
+
+.stat-value {
+    color: #147CBE;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.stat-description {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.job-list {
+    list-style-type: none;
+    padding-left: 0;
+    columns: 2; 
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.job-list li {
+    background-color: #eaf6ff;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border-left: 4px solid #147CBE;
+    font-weight: 500;
+}
+
+
+
+/* Association */
+
+
+.Association img{
+    flex-shrink: 0;
+    max-width: 400px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.Association p{
+    flex-grow: 1;
+}
+
+.Association {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+#vie_étudiante, #campus, #partenariats, #debouches, #chiffres-cles {
+    scroll-margin-top: 120px;
+}
+
+
+#contributions .stats-container {
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    display:flex;
+}
+
+#contributions .stat-box {
+    width: 48%; 
+    min-width: 300px; 
+    margin-bottom: 20px;
+
+}
+#contributions .job-list {
+    columns: 1;
+    color: #147CBE; 
+}
+
+.job-list a {
+    color: #147CBE; 
+}
