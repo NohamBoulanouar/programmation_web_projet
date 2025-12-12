@@ -588,3 +588,88 @@ main {
 .job-list a {
     color: #147CBE; 
 }
+
+
+
+/* Sign-in */
+main.sign-in-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 100px - 260px); 
+}
+
+.box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
+#informations legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #147CBE;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+#informations label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+#informations input[type="text"],
+#informations input[type="email"],
+#informations input[type="date"],
+#informations select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+#informations input:focus,
+#informations select:focus {
+    border-color: #147CBE;
+    outline: none;
+}
+
+.quiz {
+    background-color: #E74C3C; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.quiz:hover {
+    background-color: #c0392b;
+}
+
+/* Header User Info Style */
+#user-info {
+    margin-left: 15px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #147CBE;
+    white-space: nowrap;
+    display: none; 
+    border: 1px solid #147CBE;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+}
