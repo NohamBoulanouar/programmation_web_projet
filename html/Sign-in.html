@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>EFREI--L'informatique</title>
+        <meta charset="UTF-8"> 
+        <link rel= "stylesheet" href="../css/styles.css">
+        <meta name="viewport" content="width=device, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <a href="./index.html"><img id="logo" height = "159" width = "318" src ="../img/Efrei_Logo.png" alt = "Efrei_Logo_img"></a>
+            <a href="./A_propos.html">A propos</a>
+                <form id="search-form">
+                    <input type="text" placeholder="Recherche..." id="search-input">
+                </form>
+                <span id="user-info"></span>
+                <a href="./Sign-in.html"><img src="../img/sign-in.png" alt="Sign In"></a>
+            </nav>
+        </header>
+
+        <main class="sign-in-page">
+            <form id="quizId" method="post" name="Quiz" action="#" class="box" onsubmit="return false">
+                <fieldset id="informations">
+                    <legend>Vos informations :</legend>
+                    <div class="form-row"><label for="nom">Nom :</label><input type="text" id="nom" required></div>
+                    <div class="form-row"><label for="prenom">Prénom :</label><input type="text" id="prenom" required></div>
+                    <div class="form-row"><label for="naissance">Date de naissance :</label><input type="date" id="naissance" required></div>
+                    <div class="form-row"><label for="mail">Mail :</label><input type="email" id="mail" required></div>
+                    <div class="form-row">
+                        <label for="genre">Genre :</label>
+                        <select id="genre">
+                            <option value="Autre">Autre</option>
+                            <option value="Femme">Femme</option>
+                            <option value="Homme">Homme</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="quiz" id="envoyerBtn">Envoyer</button>
+                </fieldset>
+            </form>
+        </main>
+
+        <footer>
+            </footer>
+
+         <script src="../js/user_session.js"></script>
+         <script>
+            document.getElementById("quizId").addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                const nom = document.getElementById("nom").value;
+                const prenom = document.getElementById("prenom").value;
+                const naissance = document.getElementById("naissance").value;
+                const mail = document.getElementById("mail").value;
+                const genre = document.getElementById("genre").value;
+
+                const userData = {
+                    nom: nom,
+                    prenom: prenom,
+                    naissance: naissance,
+                    mail: mail,
+                    genre: genre
+                };
+                saveHeaderInfo(nom, prenom);
+                saveFullUserData(userData);
+                updateHeaderDisplay();
+                
+                alert(`Merci ${prenom}! Vos informations ont été enregistrées.`);
+            });
+        </script>
+    </body>
+</html>
