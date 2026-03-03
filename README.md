@@ -23,3 +23,8 @@ L'organisation des fichiers suit les bonnes pratiques de développement web :
 - `/json` : Fichiers de données (utilisés pour simuler une base de données ou du contenu dynamique).
 - `/img` : Ressources graphiques et icônes.
 - `Maquette ProjetWeb.pdf` : Le document de conception original servant de référence.
+---
+
+## 👥 Auteurs
+- **Louis Vovan** - [@LouisVovan](https://github.com/LouisVovan)
+- **Noham Boulanouar** - [@NohamBoulanouar](https://github.com/NohamBoulanouar)
